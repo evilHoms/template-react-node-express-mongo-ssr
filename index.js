@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 app.use("/public", express.static(path.resolve(__dirname, 'public')));
-process.env.PRODUCTION && app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+process.env.PRODUCTION && app.use(favicon(path.join(__dirname, 'favicon.ico')));
 routes(app, MongoClient);
 app.listen(port, onServerStart);
 
